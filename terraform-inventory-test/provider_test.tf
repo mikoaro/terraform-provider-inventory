@@ -6,19 +6,20 @@ terraform {
   }
 }
 
-# Configure the connection details for the inventory service
+# Configure the connection details for the Inventory service
 provider "inventory" {
   host = "127.0.0.1"
   port = "8080"
 }
 
-# Read in a existing inventory item
+# Read in a existing Inventory item
 data "inventory_item" "example" {
-  id = "1000"
+  id = "1001"
 }
 
-# Create a new inventory item
+
+# Create new Inventory item
 resource "inventory_item" "example" {
-  name = "car"
-  tag  = "mustang"
+  name = "Jones Extreme Sour Cherry Warhead Soda"
+  tag  = "USD:2.99"
 }
